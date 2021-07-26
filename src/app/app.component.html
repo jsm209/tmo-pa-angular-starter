@@ -12,9 +12,9 @@
   <button *ngIf="!showRecipeForm" (click)="toggleShowRecipeForm(true)">Add Recipe</button>
 
   <form *ngIf="showRecipeForm">
-    <label>Recipe Name:</label>
+    <label for='/Recipe name/i'>Recipe Name:</label>
     <br>
-    <input type='text' [(ngModel)]="recipeName" name='Recipe name' role='textbox'>
+    <input type='text' [(ngModel)]="recipeName" id= '/Recipe name/i' name='/Recipe name/i' role='textbox'>
     <br>
     <label>Recipe Instructions</label>
     <br>

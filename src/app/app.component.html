@@ -16,9 +16,9 @@
     <br>
     <input type='text' [(ngModel)]="recipeName" id= '/Recipe name/i' name='/Recipe name/i' role='textbox'>
     <br>
-    <label>Recipe Instructions</label>
+    <label for='/instructions/i'>Recipe Instructions</label>
     <br>
-    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe instructions' role='textbox'>
+    <input type='text' [(ngModel)]="recipeInstructions" id='/instructions/i' name='/instructions/i' role='textbox'>
     <br>
     <button name='Submit' (click)="toggleShowRecipeForm(false)">Submit</button>
   </form>

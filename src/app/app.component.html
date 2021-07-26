@@ -7,19 +7,19 @@
     <li *ngFor="let recipe of recipes"> {{ recipe.name }} </li>
   </ul>
 
-  <p *ngIf="!recipes || !recipes.length">There are no recipes to list</p>
+  <p *ngIf="!recipes || !recipes.length">There are no recipes to list.</p>
 
   <button *ngIf="!showRecipeForm" (click)="toggleShowRecipeForm(true)">Add Recipe</button>
 
-  <div *ngIf="showRecipeForm">
+  <form *ngIf="showRecipeForm">
     <label>Recipe Name:</label>
     <br>
-    <input type='text' [(ngModel)]="recipeName">
+    <input type='text' [(ngModel)]="recipeName" name='Recipe Name'>
     <br>
     <label>Recipe Instructions</label>
     <br>
-    <input type='text' [(ngModel)]="recipeInstructions">
+    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe Instructions'>
     <br>
-    <button (click)="toggleShowRecipeForm(false)">Submit</button>
-  </div>
+    <button name='Submit' (click)="toggleShowRecipeForm(false)">Submit</button>
+  </form>
 </div>

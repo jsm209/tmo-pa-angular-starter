@@ -4,7 +4,7 @@
 
   <h1>My Recipes</h1>
   <ul *ngIf="recipes && recipes.length">
-    <li *ngFor="let recipe of recipes"> {{ recipe.name }} </li>
+    <li *ngFor="let recipe of recipes" > {{ recipe.name }} </li>
   </ul>
 
   <p *ngIf="!recipes || !recipes.length">There are no recipes to list.</p>
@@ -14,11 +14,11 @@
   <form *ngIf="showRecipeForm">
     <label>Recipe Name:</label>
     <br>
-    <input type='text' [(ngModel)]="recipeName" name='Recipe Name'>
+    <input type='text' [(ngModel)]="recipeName" name='Recipe Name' role='textbox'>
     <br>
     <label>Recipe Instructions</label>
     <br>
-    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe Instructions'>
+    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe Instructions' role='textbox'>
     <br>
     <button name='Submit' (click)="toggleShowRecipeForm(false)">Submit</button>
   </form>

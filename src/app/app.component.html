@@ -14,11 +14,11 @@
   <form *ngIf="showRecipeForm">
     <label>Recipe Name:</label>
     <br>
-    <input type='text' [(ngModel)]="recipeName" name='Recipe Name' role='textbox'>
+    <input type='text' [(ngModel)]="recipeName" name='Recipe name' role='textbox'>
     <br>
     <label>Recipe Instructions</label>
     <br>
-    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe Instructions' role='textbox'>
+    <input type='text' [(ngModel)]="recipeInstructions" name='Recipe instructions' role='textbox'>
     <br>
     <button name='Submit' (click)="toggleShowRecipeForm(false)">Submit</button>
   </form>

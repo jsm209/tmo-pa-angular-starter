@@ -1,5 +1,25 @@
 <div>
   <h1 class="doNotRemoveMe">Hello world.</h1>
   <!-- ^ Do not remove this element ^ -->
+
+  <h1>My Recipes</h1>
+  <ul *ngIf="recipes && recipes.length">
+    <li *ngFor="let recipe of recipes"> {{ recipe.name }} </li>
+  </ul>
+
+  <p *ngIf="!recipes || !recipes.length">There are no recipes to list</p>
+
+  <button *ngIf="!showRecipeForm" (click)="toggleShowRecipeForm(true)">Add Recipe</button>
+
+  <div *ngIf="showRecipeForm">
+    <label>Recipe Name:</label>
+    <br>
+    <input type='text' [(ngModel)]="recipeName">
+    <br>
+    <label>Recipe Instructions</label>
+    <br>
+    <input type='text' [(ngModel)]="recipeInstructions">
+    <br>
+    <button (click)="toggleShowRecipeForm(false)">Submit</button>
+  </div>
 </div>
- 
